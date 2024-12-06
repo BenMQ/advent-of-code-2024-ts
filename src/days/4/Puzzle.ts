@@ -12,7 +12,6 @@ const first = (input: string) => {
   const getter = _.curry(getChar)(puzzle);
   const x = puzzle.length;
   const y = puzzle[0].length;
-  console.log(x, y);
   let counter = 0;
   for (let i = 0; i < x; i++) {
     for (let j = 0; j < y; j++) {
@@ -105,7 +104,6 @@ const second = (input: string) => {
   const getter = _.curry(getChar)(puzzle);
   const x = puzzle.length;
   const y = puzzle[0].length;
-  console.log(x, y);
   let counter = 0;
   for (let i = 0; i < x; i++) {
     for (let j = 0; j < y; j++) {
