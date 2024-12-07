@@ -21,6 +21,10 @@ console.log(`Solving Day #${args[0]}`);
   }
   const { first, second }: Puzzle = await import(`./days/${puzzleName}/Puzzle`);
 
+  let start = performance.now();
   console.log(first(input));
+  console.log(`  ${((performance.now() - start) / 1000).toFixed(4)}s`);
+  start = performance.now();
   console.log(second(input));
+  console.log(`  ${((performance.now() - start) / 1000).toFixed(4)}s`);
 })();
