@@ -3,7 +3,7 @@ import _ = require('lodash');
 const first = (input: string) => {
   return parseInput(input)
     .filter(({ ans, numbers }) => {
-      const has = hasSolution(ans, numbers.reverse(), false);
+      const has = hasSolution(false, ans, numbers.reverse());
       return has;
     })
     .map(({ ans }) => ans)
@@ -15,7 +15,7 @@ const expectedFirstSolution = BigInt(3749);
 const second = (input: string) => {
   return parseInput(input)
     .filter(({ ans, numbers }) => {
-      const has = hasSolution(ans, numbers.reverse(), true);
+      const has = hasSolution(true, ans, numbers.reverse());
       return has;
     })
     .map(({ ans }) => ans)
